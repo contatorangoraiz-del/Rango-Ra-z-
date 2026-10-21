@@ -61,6 +61,14 @@
             background: radial-gradient(circle at center, #1b201d 0%, var(--bg-dark) 70%);
         }
 
+        .badges-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
         .badge {
             background: rgba(92, 126, 112, 0.15);
             color: var(--accent);
@@ -70,8 +78,13 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 1.5rem;
             border: 1px solid rgba(92, 126, 112, 0.3);
+        }
+
+        .badge-santander {
+            background: rgba(200, 150, 50, 0.15);
+            color: #e5b865;
+            border-color: rgba(200, 150, 50, 0.3);
         }
 
         h1 {
@@ -124,7 +137,7 @@
             border: 1px solid rgba(255, 255, 255, 0.03);
         }
 
-        .manifesto h2, .pillars h2 {
+        .manifesto h2, .pillars h2, .founder-section h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.2rem;
             margin-bottom: 1.5rem;
@@ -161,6 +174,30 @@
             font-size: 0.95rem;
         }
 
+        .founder-section {
+            background: linear-gradient(135deg, rgba(74, 45, 54, 0.2) 0%, var(--bg-card) 100%);
+            border-radius: 12px;
+            padding: 4rem 3rem;
+            margin: 0 5%;
+            border: 1px solid rgba(92, 126, 112, 0.2);
+            text-align: center;
+        }
+
+        .founder-section p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+            font-style: italic;
+        }
+
+        .founder-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
         footer {
             text-align: center;
             padding: 4rem 5%;
@@ -170,7 +207,7 @@
         }
 
         @media (max-width: 768px) {
-            .manifesto { padding: 2rem 1.5rem; margin: 0 5%; }
+            .manifesto, .founder-section { padding: 2rem 1.5rem; margin: 0 5%; }
             section { padding: 4rem 5%; }
         }
     </style>
@@ -184,39 +221,48 @@
 
     <main>
         <section class="hero">
-            <div class="badge">Inovação Alimentar do Zero à Prateleira</div>
+            <div class="badges-container">
+                <div class="badge">Inovação Alimentar do Zero à Prateleira</div>
+                <div class="badge badge-santander">Selecionado Santander X Explorer</div>
+            </div>
             <h1>Resgatando a comida de verdade com <span>ciência e técnica.</span></h1>
-            <p>Desenvolvemos produtos inéditos de rotulagem limpa, eliminando aditivos químicos e resgatando a integridade biológica de cada ingrediente.</p>
-            <a href="#manifesto" class="btn">Conheça o Projeto</a>
+            <p>Desenvolvemos produtos inéditos de rotulagem limpa, eliminando aditivos químicos desnecessários e devolvendo a integridade e a alma do ingrediente para a sua mesa.</p>
+            <a href="#manifesto" class="btn">Conheça o Manifesto</a>
         </section>
 
         <section id="manifesto" class="manifesto">
             <h2>A Inquietude que Gerou o Inédito</h2>
-            <p>O Rango Raíz nasceu de uma análise crítica das prateleiras de mercado: ao observar a rotulagem de industrializados, a falta de transparência e o excesso de aditivos sintéticos saltavam aos olhos. Era um problema claro que exigia uma solução real.</p>
-            <p>Foi assim que transformamos a indignação em inovação de alto desempenho. Criamos formulações exclusivas — como nossa massa <em>clean-label</em> e blends de ervas com testes de prateleira (*shelf life*) rigorosamente validados — que simplesmente não existem no mercado tradicional.</p>
+            <p>O <strong>Rango Raíz</strong> nasceu de uma análise crítica e real das prateleiras de mercado. Ao observar a rotulagem dos industrializados, a falta de transparência e o excesso de aditivos sintéticos saltavam aos olhos, revelando um problema estrutural que exigia uma solução genuína.</p>
+            <p>Transformamos essa indignação em inovação de alto desempenho. Criamos formulações exclusivas, a exemplo da nossa massa <em>clean-label</em> e dos blends de temperos com testes de prateleira (<em>shelf life</em>) rigorosamente validados, que simplesmente não encontram equivalentes no mercado tradicional. É conveniência unida à pureza biológica, feita inteiramente do zero.</p>
         </section>
 
         <section class="pillars">
-            <h2>Pilares do Desenvolvimento</h2>
+            <h2>A Engenharia do Rango Raíz</h2>
             <div class="grid-pillars">
                 <div class="pillar-card">
-                    <h3>01. Da Raiz ao Prato</h3>
-                    <p>Pesquisa profunda da origem e da química dos materiais, investigando desde o cultivo e a agronomia até a formulação final do produto.</p>
+                    <h3>01. Seleção e Origem</h3>
+                    <p>Investigação profunda da química e do comportamento dos ingredientes, valorizando a procedência e preservando o potencial biológico de cada elemento.</p>
                 </div>
                 <div class="pillar-card">
-                    <h3>02. Clean-Label Real</h3>
-                    <p>Zero aditivos desnecessários. Engenharia de alimentos focada em tecnologia limpa, preservando o valor biológico e o sabor genuíno.</p>
+                    <h3>02. Formulação Clean-Label</h3>
+                    <p>Desenvolvimento proprietário sem atalhos químicos ou aditivos ocultos. Tecnologia de ponta voltada para entregar sabor genuíno e honestidade nutricional.</p>
                 </div>
                 <div class="pillar-card">
-                    <h3>03. Validação e Rigor</h3>
-                    <p>Processos testados e validados — incluindo testes de prateleira (*shelf life*) consolidados e desidratação controlada.</p>
+                    <h3>03. Rigor e Validação</h3>
+                    <p>Processos consolidados de desidratação controlada e testes rigorosos de prateleira (<em>shelf life</em>) que garantem estabilidade, segurança e excelência de ponta a ponta.</p>
                 </div>
             </div>
+        </section>
+
+        <section class="founder-section">
+            <h2>Visão de Fundadora</h2>
+            <p>"Acredito que a alta gastronomia e a ciência dos alimentos devem trabalhar a favor da vida real. O Rango Raíz é a materialização do meu compromisso em devolver autonomia, transparência e sabor legítimo para o prato das pessoas."</p>
+            <div class="founder-name">Poliane Mendes — Gastrônoma & Desenvolvedora Clean-Label</div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Rango Raíz. Poliane Mendes — Gastrônoma & Especialista em Negócios Gastronômicos.</p>
+        <p>&copy; 2026 Rango Raíz. Todos os direitos reservados.</p>
     </footer>
 
 </body>
