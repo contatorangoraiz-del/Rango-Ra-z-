@@ -93,6 +93,37 @@
             margin: 0 auto 1.2rem auto;
         }
 
+        /* MANIFESTO DA FUNDADORA */
+        .founder-section {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F4EFE6 100%);
+            border-radius: 16px;
+            padding: 4rem 3rem;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+            margin-bottom: 4rem;
+            border-left: 6px solid var(--accent);
+        }
+
+        .founder-content h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .founder-content p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+        }
+
+        .founder-signature {
+            margin-top: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
         .section-title {
             text-align: center;
             font-size: 2.2rem;
@@ -305,12 +336,19 @@
         }
 
         footer p {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-size: 1.05rem;
             color: #D1D5DB;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .disclaimer {
+            font-size: 0.85rem;
+            color: #9CA3AF;
+            margin-bottom: 2.5rem;
+            font-style: italic;
         }
 
         .contact-btn {
@@ -334,6 +372,7 @@
         @media (max-width: 768px) {
             header h1 { font-size: 2.3rem; }
             .manifesto { padding: 2.5rem 1.5rem; }
+            .founder-section { padding: 2.5rem 1.5rem; }
         }
     </style>
 </head>
@@ -351,6 +390,20 @@
             <h2>Sem química, sem atalhos, 100% ingredientes reais</h2>
             <p>Vivemos o paradoxo da vida moderna: as pessoas querem se alimentar bem, mas a rotina corrida exige praticidade. Quem busca rapidez acaba refém de ultraprocessados cheios de aditivos sintéticos ou congelados sem alma.</p>
             <p>O <strong>Rango Raíz</strong> rompe com isso. Trazemos uma refeição instantânea que une o melhor da tecnologia limpa (<em>clean-label</em>) com o calor da culinária artesanal: cozida no vapor, seca no forno e moldada pela paixão da gastronomia.</p>
+        </section>
+
+        <!-- MANIFESTO DA FUNDADORA -->
+        <section class="founder-section">
+            <div class="founder-content">
+                <h2>Por trás de cada pote, um compromisso de verdade</h2>
+                <p>Eu sempre acreditei que a gastronomia tem o poder de nos ancorar, de nos lembrar de quem somos e de onde viemos, mesmo nos dias mais corridos. Criei o Rango Raíz porque me recusava a aceitar que praticidade precisasse custar a nossa saúde ou o sabor da nossa cultura.</p>
+                <p>Cada detalhe — do rigor técnico da massa limpa ao respeito pelas nossas riquezas regionais — foi pensado com alma e pesquisa para caber na sua rotina sem perder a essência. Comer bem não deve ser um luxo inacessível e nem um atalho artificial.</p>
+                <div class="founder-signature">
+                    Com afeto e propósito,<br>
+                    Poliane Mariana Mendes<br>
+                    <span style="font-size: 0.9rem; font-weight: 400; color: var(--text-muted); font-style: normal;">Gastrônoma & Fundadora</span>
+                </div>
+            </div>
         </section>
 
         <h2 class="section-title">O Padrão Rango Raíz</h2>
@@ -425,10 +478,10 @@
             <div class="lifestyle-grid">
                 <div class="lifestyle-card">
                     <img src="IMG_20261105_230104.jpg" alt="No escritório" class="lifestyle-img">
-                    <div class="lifestyle-caption">No Trabalho & Escritório</div>
+                    <div class="lifestyle-caption">Pausa Inteligente no Trabalho</div>
                 </div>
                 <div class="lifestyle-card">
-                    <img src="IMG_20261105_250020.jpg" alt="Relaxando no sofá" class="lifestyle-img">
+                    <img src="IMG_20261105_230020.jpg" alt="Relaxando no sofá" class="lifestyle-img">
                     <div class="lifestyle-caption">Pausa com Conforto</div>
                 </div>
                 <div class="lifestyle-card">
@@ -441,7 +494,7 @@
                 </div>
                 <div class="lifestyle-card">
                     <img src="IMG_20261105_230049.jpg" alt="Na academia" class="lifestyle-img">
-                    <div class="lifestyle-caption">Energia Limpa na Academia</div>
+                    <div class="lifestyle-caption">Sabor em Movimento</div>
                 </div>
                 <div class="lifestyle-card">
                     <img src="IMG_20261105_225959.jpg" alt="Família reunida" class="lifestyle-img">
@@ -449,7 +502,7 @@
                 </div>
                 <div class="lifestyle-card">
                     <img src="IMG_20261105_225936.jpg" alt="Na varanda do interior" class="lifestyle-img">
-                    <div class="lifestyle-caption">Tradição que Atravessou Gerações</div>
+                    <div class="lifestyle-caption">Tempo de Qualidade</div>
                 </div>
             </div>
         </section>
@@ -459,6 +512,7 @@
     <footer>
         <h2>Faça Parte da Nossa Jornada</h2>
         <p>Quer trocar ideias, conhecer mais sobre o projeto ou se conectar com a nossa proposta? Entre em contato conosco:</p>
+        <p class="disclaimer">Imagens meramente ilustrativas.</p>
         <a href="mailto:contato.rangoraiz@gmail.com" class="contact-btn">contato.rangoraiz@gmail.com</a>
     </footer>
 
