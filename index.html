@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rango Raíz | Refeição Instantânea Limpa e Funcional</title>
+    <title>Rango Raíz | O Sabor do Brasil no Tempo da Sua Fome</title>
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2C3E35;
-            --accent: #D4A373;
-            --bg-light: #F9F6F0;
+            --primary: #2C3E35; /* Verde oliva profundo / Raízes da terra */
+            --accent: #D4A373;  /* Tom quente / Aconchego e artesanato */
+            --bg-light: #F9F6F0; /* Off-white limpo / Clean-label */
             --text-dark: #2D2D2D;
             --text-muted: #555555;
             --white: #FFFFFF;
@@ -29,11 +29,13 @@
             line-height: 1.7;
         }
 
+        /* HERO / CABEÇALHO */
         header {
             background-color: var(--primary);
             color: var(--white);
             text-align: center;
-            padding: 4rem 1.5rem;
+            padding: 5rem 1.5rem;
+            position: relative;
         }
 
         .badge-signature {
@@ -50,17 +52,17 @@
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: 800;
             margin-bottom: 0.75rem;
             letter-spacing: -0.5px;
         }
 
         header p {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             font-weight: 300;
             color: var(--accent);
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto;
         }
 
@@ -70,29 +72,31 @@
             padding: 4rem 1.5rem;
         }
 
+        /* MANIFESTO E ESSÊNCIA */
         .manifesto {
             background: var(--white);
             border-radius: 16px;
-            padding: 3rem 2rem;
+            padding: 3.5rem 2.5rem;
             box-shadow: 0 4px 20px rgba(0,0,0,0.04);
             margin-bottom: 4rem;
             text-align: center;
         }
 
         .manifesto h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: var(--primary);
             margin-bottom: 1.5rem;
             font-weight: 700;
         }
 
         .manifesto p {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             color: var(--text-muted);
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto 1.2rem auto;
         }
 
+        /* PILARES TÉCNICOS */
         .section-title {
             text-align: center;
             font-size: 2.2rem;
@@ -105,15 +109,20 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 2rem;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
         }
 
         .pillar-card {
             background: var(--white);
             border-radius: 16px;
-            padding: 2.2rem 2rem;
+            padding: 2.5rem 2rem;
             box-shadow: 0 4px 15px rgba(0,0,0,0.04);
             border-top: 4px solid var(--accent);
+            transition: transform 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
         }
 
         .pillar-card h3 {
@@ -128,11 +137,38 @@
             color: var(--text-muted);
         }
 
+        /* SEÇÃO DE REGIONALIDADE / VIAGEM DE SABORES */
+        .regional-banner {
+            background: linear-gradient(135deg, var(--primary) #1E2D26);
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 20px;
+            padding: 4rem 2.5rem;
+            text-align: center;
+            margin-bottom: 5rem;
+            box-shadow: 0 10px 30px rgba(44, 62, 53, 0.15);
+        }
+
+        .regional-banner h2 {
+            font-size: 2.3rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .regional-banner p {
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #E2E8F0;
+            font-weight: 300;
+        }
+
+        /* VITRINE DE PRODUTOS ALTAMENTE IMERSIVA */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2.5rem;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
         }
 
         .product-card {
@@ -141,6 +177,8 @@
             overflow: hidden;
             box-shadow: 0 6px 25px rgba(0,0,0,0.06);
             transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .product-card:hover {
@@ -149,14 +187,17 @@
 
         .product-image {
             width: 100%;
-            height: 260px;
+            height: 280px;
             object-fit: cover;
             background-color: #E2E8F0;
             border-bottom: 1px solid #EDF2F7;
         }
 
         .product-info {
-            padding: 2rem;
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
         .tag {
@@ -170,71 +211,74 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 1rem;
+            align-self: flex-start;
         }
 
         .product-info h3 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: var(--primary);
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
             font-weight: 700;
         }
 
         .product-info p {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: var(--text-muted);
         }
 
+        /* SEÇÃO DE EXPERIÊNCIA / FAMÍLIA */
         .experience-section {
             background: var(--white);
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 6px 25px rgba(0,0,0,0.06);
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 0;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
             align-items: center;
         }
 
         .experience-img {
             width: 100%;
             height: 100%;
-            min-height: 300px;
+            min-height: 350px;
             object-fit: cover;
         }
 
         .experience-content {
-            padding: 3rem 2rem;
+            padding: 3.5rem 3rem;
         }
 
         .experience-content h3 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--primary);
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             font-weight: 700;
         }
 
         .experience-content p {
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 1.05rem;
         }
 
+        /* RODAPÉ */
         footer {
             background-color: var(--primary);
             color: var(--white);
             text-align: center;
-            padding: 4rem 1.5rem;
+            padding: 5rem 1.5rem;
         }
 
         footer h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
             color: var(--white);
         }
 
         footer p {
             margin-bottom: 2rem;
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: #D1D5DB;
             max-width: 600px;
             margin-left: auto;
@@ -245,11 +289,11 @@
             display: inline-block;
             background-color: var(--accent);
             color: var(--primary);
-            padding: 0.9rem 2.2rem;
+            padding: 1rem 2.5rem;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 1.05rem;
             transition: background 0.2s, transform 0.2s;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
@@ -260,13 +304,15 @@
         }
 
         @media (max-width: 768px) {
-            header h1 { font-size: 2.2rem; }
-            .manifesto { padding: 2rem 1.25rem; }
+            header h1 { font-size: 2.3rem; }
+            .manifesto { padding: 2.5rem 1.5rem; }
+            .experience-content { padding: 2.5rem 1.5rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- HERO SECTION -->
     <header>
         <span class="badge-signature">Gourmet Convenience</span>
         <h1>Rango Raíz</h1>
@@ -275,12 +321,14 @@
 
     <div class="container">
 
+        <!-- MANIFESTO / ESSÊNCIA -->
         <section class="manifesto">
             <h2>Sem química, sem atalhos, 100% ingredientes reais</h2>
             <p>Vivemos o paradoxo da vida moderna: as pessoas querem se alimentar bem, mas a rotina corrida exige praticidade. Quem busca rapidez acaba refém de ultraprocessados cheios de aditivos sintéticos ou congelados sem alma.</p>
             <p>O <strong>Rango Raíz</strong> rompe com isso. Trazemos uma refeição instantânea que une o melhor da tecnologia limpa (<em>clean-label</em>) com o calor da culinária artesanal: cozida no vapor, seca no forno e moldada pela paixão da gastronomia.</p>
         </section>
 
+        <!-- PILARES TÉCNICOS -->
         <h2 class="section-title">O Padrão Rango Raíz</h2>
         <div class="pillars-grid">
             <div class="pillar-card">
@@ -297,48 +345,55 @@
             </div>
         </div>
 
-        <h2 class="section-title">Nosso Produto</h2>
+        <!-- BANNER DE REGIONALIDADE (O toque de viagem de sabores) -->
+        <section class="regional-banner">
+            <h2>🌍 Viaje pelo Brasil em Cada Colherada</h2>
+            <p>Já imaginou saborear a rusticidade de um tempero mineiro morando no Sul, ou sentir o calor do terroir gaúcho estando no Nordeste? O Rango Raíz elimina as distâncias geográficas da sua mesa, levando a alma das nossas cozinhas regionais para a sua rotina em poucos minutos.</p>
+        </section>
+
+        <!-- VITRINE DE PRODUTOS COM FOCO SENSORIAL E REGIONAL -->
+        <h2 class="section-title">Nossas Criações</h2>
         <div class="product-grid">
             
-            <!-- Card 1: IMG_20261105_205205.jpg -->
+            <!-- Card 1: Sabor Mineiro -->
             <div class="product-card">
-                <img src="IMG_20261105_205205.jpg" alt="Rango Raíz - Sabor Mineiro" class="product-image">
+                <img src="IMG_20261105_205431.jpg" alt="Rango Raíz - Sabor Mineiro" class="product-image">
                 <div class="product-info">
-                    <span class="tag">Clean-Label</span>
+                    <span class="tag">Tradição Mineira</span>
                     <h3>Canastra & Lombo com Ora-pro-nóbis</h3>
-                    <p>Sabor Mineiro autêntico. 100% Massa Seca ao Ar, Sabor Real e Zero Química. Pronto em minutos com a pureza de uma refeição feita do zero.</p>
+                    <p>Uma imersão profunda na culinária de Minas. O perfil curado e marcante do autêntico queijo Canastra une-se à suculência do lombo suíno e à força nutritiva do ora-pro-nóbis. Um caldo encorpado que evoca o abraço de um fogão a lenha, pronto para te aquecer onde quer que você esteja.</p>
                 </div>
             </div>
 
-            <!-- Card 2: IMG_20261105_205230.jpg -->
+            <!-- Card 2: Blend Regional Exclusivo -->
             <div class="product-card">
                 <img src="IMG_20261105_205230.jpg" alt="Rango Raíz - Linha Regional" class="product-image">
                 <div class="product-info">
-                    <span class="tag">Artesanal & Funcional</span>
+                    <span class="tag">Terroir Brasileiro</span>
                     <h3>Blend Regional Exclusivo</h3>
-                    <p>Conveniência de alta performance unida a ingredientes reais. Estabilidade perfeita em temperatura ambiente sem nenhum atalho artificial.</p>
+                    <p>Uma celebração dos temperos e aromas mais vivos do nosso país. Desenvolvido para paladares que exigem personalidade e profundidade, este prato entrega uma experiência sensorial rica e calorosa, transformando uma refeição rápida em um verdadeiro ritual de afeto e cultura.</p>
                 </div>
             </div>
 
         </div>
 
-        <!-- Seção Experiência: IMG_20261105_205431.jpg -->
+        <!-- SEÇÃO DE EXPERIÊNCIA -->
         <section class="experience-section">
-            <img src="IMG_20261105_205431.jpg" alt="Família desfrutando do Rango Raíz" class="experience-img">
+            <img src="IMG_20261105_205205.jpg" alt="Família desfrutando do Rango Raíz" class="experience-img">
             <div class="experience-content">
                 <h3>O Aconchego na Rotina</h3>
-                <p>O Rango Raíz foi pensado para devolver o tempo e o bem-estar para o seu dia a dia. Uma refeição prática que reúne quem você ama ao redor da mesa, entregando nutrição real e sabor inconfundível sem abrir mão da correria moderna.</p>
+                <p>O Rango Raíz foi idealizado para devolver o bem-estar e o valor do tempo ao seu dia a dia. Mais do que conveniência, é sobre sentar à mesa com quem você ama e saborear uma comida de verdade, que nutre a memória afetiva sem cobrar o preço da correria moderna.</p>
             </div>
         </section>
 
     </div>
 
+    <!-- RODAPÉ -->
     <footer>
         <h2>Faça Parte da Nossa Jornada</h2>
-        <p>Quer conhecer mais sobre o projeto, trocar ideias ou se conectar com a nossa proposta? Entre em contato conosco:</p>
+        <p>Quer trocar ideias, conhecer mais sobre o projeto ou se conectar com a nossa proposta? Entre em contato conosco:</p>
         <a href="mailto:contato.rangoraiz@gmail.com" class="contact-btn">contato.rangoraiz@gmail.com</a>
     </footer>
 
 </body>
 </html>
-
