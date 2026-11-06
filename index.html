@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2C3E35; /* Verde oliva profundo / Raízes da terra */
-            --accent: #D4A373;  /* Tom quente / Aconchego e artesanato */
-            --bg-light: #F9F6F0; /* Off-white limpo / Clean-label */
+            --primary: #2C3E35;
+            --accent: #D4A373;
+            --bg-light: #F9F6F0;
             --text-dark: #2D2D2D;
             --text-muted: #555555;
             --white: #FFFFFF;
@@ -29,13 +29,11 @@
             line-height: 1.7;
         }
 
-        /* HERO / CABEÇALHO */
         header {
             background-color: var(--primary);
             color: var(--white);
             text-align: center;
             padding: 5rem 1.5rem;
-            position: relative;
         }
 
         .badge-signature {
@@ -72,7 +70,6 @@
             padding: 4rem 1.5rem;
         }
 
-        /* MANIFESTO E ESSÊNCIA */
         .manifesto {
             background: var(--white);
             border-radius: 16px;
@@ -96,7 +93,6 @@
             margin: 0 auto 1.2rem auto;
         }
 
-        /* PILARES TÉCNICOS */
         .section-title {
             text-align: center;
             font-size: 2.2rem;
@@ -137,9 +133,7 @@
             color: var(--text-muted);
         }
 
-        /* SEÇÃO DE REGIONALIDADE / VIAGEM DE SABORES */
         .regional-banner {
-            background: linear-gradient(135deg, var(--primary) #1E2D26);
             background-color: var(--primary);
             color: var(--white);
             border-radius: 20px;
@@ -158,12 +152,29 @@
         .regional-banner p {
             font-size: 1.15rem;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 2rem auto;
             color: #E2E8F0;
             font-weight: 300;
         }
 
-        /* VITRINE DE PRODUTOS ALTAMENTE IMERSIVA */
+        .map-concept {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .region-pill {
+            background: rgba(212, 163, 115, 0.2);
+            color: var(--accent);
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(212, 163, 115, 0.4);
+        }
+
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -226,43 +237,60 @@
             color: var(--text-muted);
         }
 
-        /* SEÇÃO DE EXPERIÊNCIA / FAMÍLIA */
-        .experience-section {
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 6px 25px rgba(0,0,0,0.06);
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 0;
+        .lifestyle-section {
             margin-bottom: 5rem;
-            align-items: center;
         }
 
-        .experience-img {
-            width: 100%;
-            height: 100%;
-            min-height: 350px;
-            object-fit: cover;
+        .lifestyle-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
         }
 
-        .experience-content {
-            padding: 3.5rem 3rem;
-        }
-
-        .experience-content h3 {
-            font-size: 2rem;
+        .lifestyle-intro h2 {
+            font-size: 2.2rem;
             color: var(--primary);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             font-weight: 700;
         }
 
-        .experience-content p {
+        .lifestyle-intro p {
             color: var(--text-muted);
             font-size: 1.05rem;
         }
 
-        /* RODAPÉ */
+        .lifestyle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .lifestyle-card {
+            background: var(--white);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease;
+        }
+
+        .lifestyle-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .lifestyle-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .lifestyle-caption {
+            padding: 1.2rem;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
         footer {
             background-color: var(--primary);
             color: var(--white);
@@ -306,13 +334,11 @@
         @media (max-width: 768px) {
             header h1 { font-size: 2.3rem; }
             .manifesto { padding: 2.5rem 1.5rem; }
-            .experience-content { padding: 2.5rem 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
     <header>
         <span class="badge-signature">Gourmet Convenience</span>
         <h1>Rango Raíz</h1>
@@ -321,14 +347,12 @@
 
     <div class="container">
 
-        <!-- MANIFESTO / ESSÊNCIA -->
         <section class="manifesto">
             <h2>Sem química, sem atalhos, 100% ingredientes reais</h2>
             <p>Vivemos o paradoxo da vida moderna: as pessoas querem se alimentar bem, mas a rotina corrida exige praticidade. Quem busca rapidez acaba refém de ultraprocessados cheios de aditivos sintéticos ou congelados sem alma.</p>
             <p>O <strong>Rango Raíz</strong> rompe com isso. Trazemos uma refeição instantânea que une o melhor da tecnologia limpa (<em>clean-label</em>) com o calor da culinária artesanal: cozida no vapor, seca no forno e moldada pela paixão da gastronomia.</p>
         </section>
 
-        <!-- PILARES TÉCNICOS -->
         <h2 class="section-title">O Padrão Rango Raíz</h2>
         <div class="pillars-grid">
             <div class="pillar-card">
@@ -345,50 +369,93 @@
             </div>
         </div>
 
-        <!-- BANNER DE REGIONALIDADE (O toque de viagem de sabores) -->
         <section class="regional-banner">
             <h2>🌍 Viaje pelo Brasil em Cada Colherada</h2>
-            <p>Já imaginou saborear a rusticidade de um tempero mineiro morando no Sul, ou sentir o calor do terroir gaúcho estando no Nordeste? O Rango Raíz elimina as distâncias geográficas da sua mesa, levando a alma das nossas cozinhas regionais para a sua rotina em poucos minutos.</p>
+            <p>Já imaginou saborear a rusticidade de um tempero do Sul morando no Nordeste, ou sentir o calor da culinária nortista estando no Sul? O Rango Raíz conecta as riquezas do nosso país diretamente à sua mesa em poucos minutos.</p>
+            <div class="map-concept">
+                <span class="region-pill">📍 Região Sul</span>
+                <span class="region-pill">📍 Sudeste</span>
+                <span class="region-pill">📍 Centro-Oeste</span>
+                <span class="region-pill">📍 Norte</span>
+                <span class="region-pill">📍 Nordeste</span>
+            </div>
         </section>
 
-        <!-- VITRINE DE PRODUTOS COM FOCO SENSORIAL E REGIONAL -->
-        <h2 class="section-title">Nossas Criações</h2>
+        <h2 class="section-title">Nossas Criações Regionais</h2>
         <div class="product-grid">
             
-            <!-- Card 1: Sabor Mineiro -->
+            <!-- Sabor Mineiro -->
             <div class="product-card">
-                <img src="IMG_20261105_205431.jpg" alt="Rango Raíz - Sabor Mineiro" class="product-image">
+                <img src="IMG_20261105_205205.jpg" alt="Rango Raíz - Sabor Mineiro" class="product-image">
                 <div class="product-info">
-                    <span class="tag">Tradição Mineira</span>
-                    <h3>Canastra & Lombo com Ora-pro-nóbis</h3>
-                    <p>Uma imersão profunda na culinária de Minas. O perfil curado e marcante do autêntico queijo Canastra une-se à suculência do lombo suíno e à força nutritiva do ora-pro-nóbis. Um caldo encorpado que evoca o abraço de um fogão a lenha, pronto para te aquecer onde quer que você esteja.</p>
+                    <span class="tag">Tradição & Afeto</span>
+                    <h3>Sabor Mineiro</h3>
+                    <p>Uma imersão profunda na culinária de raiz de Minas. Um perfil gustativo rico, encorpado e reconfortante, que evoca o calor e a memória de um fogão a lenha tradicional para abraçar o seu dia.</p>
                 </div>
             </div>
 
-            <!-- Card 2: Blend Regional Exclusivo -->
+            <!-- Sabor Gaúcho -->
             <div class="product-card">
-                <img src="IMG_20261105_205230.jpg" alt="Rango Raíz - Linha Regional" class="product-image">
+                <img src="IMG_20261105_205230.jpg" alt="Rango Raíz - Sabor Gaúcho" class="product-image">
                 <div class="product-info">
-                    <span class="tag">Terroir Brasileiro</span>
-                    <h3>Blend Regional Exclusivo</h3>
-                    <p>Uma celebração dos temperos e aromas mais vivos do nosso país. Desenvolvido para paladares que exigem personalidade e profundidade, este prato entrega uma experiência sensorial rica e calorosa, transformando uma refeição rápida em um verdadeiro ritual de afeto e cultura.</p>
+                    <span class="tag">Terroir Sulista</span>
+                    <h3>Sabor Gaúcho</h3>
+                    <p>A força e a rusticidade dos pampas traduzidas em uma experiência gastronômica intensa e marcante. Aromas profundos e notas rústicas que entregam a essência dos rituais do Sul em sua forma mais pura.</p>
+                </div>
+            </div>
+
+            <!-- Amazônia & Cerrado -->
+            <div class="product-card">
+                <img src="IMG_20261105_205253.jpg" alt="Rango Raíz - Linha Amazônia e Cerrado" class="product-image">
+                <div class="product-info">
+                    <span class="tag">Biodiversidade Viva</span>
+                    <h3>Amazônia & Cerrado</h3>
+                    <p>A energia vibrante das matas e do centro do país em criações audaciosas. Caldos ácidos, vibrantes e exóticos que despertam os sentidos e celebram a riqueza botânica brasileira.</p>
                 </div>
             </div>
 
         </div>
 
-        <!-- SEÇÃO DE EXPERIÊNCIA -->
-        <section class="experience-section">
-            <img src="IMG_20261105_205205.jpg" alt="Família desfrutando do Rango Raíz" class="experience-img">
-            <div class="experience-content">
-                <h3>O Aconchego na Rotina</h3>
-                <p>O Rango Raíz foi idealizado para devolver o bem-estar e o valor do tempo ao seu dia a dia. Mais do que conveniência, é sobre sentar à mesa com quem você ama e saborear uma comida de verdade, que nutre a memória afetiva sem cobrar o preço da correria moderna.</p>
+        <section class="lifestyle-section">
+            <div class="lifestyle-intro">
+                <h2>O Rango Raíz no Seu Ritmo</h2>
+                <p>Seja na correria do escritório, na maratona de estudos, relaxando em casa ou em movimento: conveniência real para todos os momentos da sua jornada.</p>
+            </div>
+            
+            <div class="lifestyle-grid">
+                <div class="lifestyle-card">
+                    <img src="IMG_20261105_230104.jpg" alt="No escritório" class="lifestyle-img">
+                    <div class="lifestyle-caption">No Trabalho & Escritório</div>
+                </div>
+                <div class="lifestyle-card">
+                    <img src="IMG_20261105_250020.jpg" alt="Relaxando no sofá" class="lifestyle-img">
+                    <div class="lifestyle-caption">Pausa com Conforto</div>
+                </div>
+                <div class="lifestyle-card">
+                    <img src="IMG_20261105_230033.jpg" alt="Momento Gamer" class="lifestyle-img">
+                    <div class="lifestyle-caption">Foco Total no Game</div>
+                </div>
+                <div class="lifestyle-card">
+                    <img src="IMG_20261105_225917.jpg" alt="Estudante na república" class="lifestyle-img">
+                    <div class="lifestyle-caption">Praticidade nos Estudos</div>
+                </div>
+                <div class="lifestyle-card">
+                    <img src="IMG_20261105_230049.jpg" alt="Na academia" class="lifestyle-img">
+                    <div class="lifestyle-caption">Energia Limpa na Academia</div>
+                </div>
+                <div class="lifestyle-card">
+                    <img src="IMG_20261105_225959.jpg" alt="Família reunida" class="lifestyle-img">
+                    <div class="lifestyle-caption">Conexão em Família</div>
+                </div>
+                <div class="lifestyle-card">
+                    <img src="IMG_20261105_225936.jpg" alt="Na varanda do interior" class="lifestyle-img">
+                    <div class="lifestyle-caption">Tradição que Atravessou Gerações</div>
+                </div>
             </div>
         </section>
 
     </div>
 
-    <!-- RODAPÉ -->
     <footer>
         <h2>Faça Parte da Nossa Jornada</h2>
         <p>Quer trocar ideias, conhecer mais sobre o projeto ou se conectar com a nossa proposta? Entre em contato conosco:</p>
